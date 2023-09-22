@@ -1,0 +1,256 @@
+/* styles.css */
+/* Reset de estilos padrão */
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-image: url(img/backgound2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0%;
+}
+
+/* Estilos para o menu de navegação */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    /* Para posicionar o logo à esquerda e a lista à direita */
+
+    padding: 1.5em 1.5em;
+    margin-bottom: 0;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo img {
+    width: 100px;
+    /* Ajuste a largura da imagem do logo conforme necessário */
+    height: auto;
+    /* Para manter a proporção da imagem */
+    /* Remova margin-right para criar um espaço à direita do logo */
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    margin-right: 0;
+    align-items: right;
+    /* Remova margin-right do .nav-list para alinhar os itens à direita */
+}
+
+.nav-list li {
+    margin: 0 1em;
+
+}
+
+.nav-list a {
+    text-decoration: none;
+    color: #c9c9c9;
+    font-size: 1.2em;
+    transition: color 0.3s ease;
+}
+
+.nav-list a:hover {
+    color: #b10026;
+}
+
+.icones {
+    margin-right: 0.5em;
+    /* Adicione um espaço entre a lista e os ícones */
+}
+
+/* Estilos para tornar o menu responsivo */
+@media screen and (max-width: 768px) {
+    .nav-list {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-list.active {
+        display: flex;
+    }
+
+    .nav-list li {
+        margin: 10px 0;
+    }
+}
+
+/* Seção Principal */
+.main {
+    padding: 1em;
+    padding-bottom: 3em;
+    margin-bottom: 50px;
+
+    /*box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;*/
+}
+
+.info {
+    display: grid;
+    place-items: center;
+    margin: 0px 500px 30px 500px;
+}
+
+.info img {
+    display: flex;
+    place-items: center;
+    background: lightblue;
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+
+}
+.info h1 {
+    text-align: center;
+}
+.info h3 {
+    text-align: justify;
+    color: white;
+}
+
+
+
+
+.typewriter h1,
+.typewriter h2 {
+    display: grid;
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 0;
+    letter-spacing: 0.15em;
+    animation: typing 3s steps(40, end), blink-caret .75s step-end infinite;
+    text-align: center;
+    color: white;
+    animation-delay: .5s;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink-caret {
+
+    from,
+    to {
+        border-color: transparent;
+    }
+
+    50% {
+        border-color: #b10026;
+    }
+}
+
+#projetos {
+    text-align: center;
+}
+
+#projetos img {
+    width: 30%;
+    height: auto;
+}
+
+/* Estilos para o botão de download */
+.button-download {
+    text-align: center; /* Centraliza o botão na div */
+    margin-top: 20px; /* Espaçamento superior (ajuste conforme necessário) */
+}
+
+/* Estilos para o botão de download */
+.button-download button {
+    background-color: #b10026;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Estilo quando o mouse passa por cima do botão */
+.button-download button:hover {
+    background-color: #b10026;
+}
+
+/* Estilo quando o botão está desativado */
+.button-download button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+/* Estilo para o link de download dentro do botão */
+.button-download a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+
+/* Estilo para o footer */
+.footer {
+    display: flex;
+    /* Define o display como flex */
+    justify-content: space-between;
+    /* Distribui os elementos igualmente na largura */
+    align-items: center;
+    /* Centraliza verticalmente os elementos */
+    text-align: center;
+    padding: .75em 0;
+    bottom: 0;
+    position: fixed;
+    width: 100%;
+    background-color: #111111;
+}
+
+.footer p {
+    color: #c9c9c9;
+    align-items: center;
+    opacity: 50%;
+    margin-left: 50px;
+    text-align: center;
+
+
+}
+
+/* Estilo para a lista de navegação no footer */
+.nav-listFooter {
+    list-style: none;
+    /* Remove os marcadores da lista */
+    padding: 0;
+    /* Remove o espaçamento interno padrão da lista */
+    display: flex;
+    margin-right: 50px;
+    /*Remove a margem para alinhar os itens à direita*/
+}
+
+/* Estilo para os itens da lista de navegação no footer */
+.nav-listFooter li {
+    margin-right: 10px;
+    /* Espaço entre os itens (opcional) */
+}
+
+/* Estilo para os links na lista de navegação no footer */
+.nav-listFooter li a {
+    color: #c9c9c9;
+    /* Cor do link (opcional) */
+    text-decoration: none;
+    /* Remove sublinhado dos links (opcional) */
+    /* margin: 0 0.5em;  Remove a margem para alinhar os itens à direita */
+    opacity: 50%;
+}
+
+.nav-listFooter a:hover {
+    color: #b10026;
+}
